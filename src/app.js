@@ -21,7 +21,7 @@ const strictButton = document.querySelector("#strict");
 const onButton = document.querySelector("#on");
 const startButton = document.querySelector("#start");
 
-strictButton.addEventListener("change", event => {
+strictButton.addEventListener("change", (event) => {
   if (strictButton.checked == true) {
     strict = true;
   } else {
@@ -29,7 +29,7 @@ strictButton.addEventListener("change", event => {
   }
 });
 
-onButton.addEventListener("click", event => {
+onButton.addEventListener("click", (event) => {
   if (onButton.checked == true) {
     on = true;
     turnCounter.innerHTML = "-";
@@ -40,7 +40,7 @@ onButton.addEventListener("click", event => {
     clearInterval(intervalId);
   }
 
-  startButton.addEventListener("click", event => {
+  startButton.addEventListener("click", (event) => {
     if (on || win) {
       play();
     }
@@ -118,7 +118,7 @@ onButton.addEventListener("click", event => {
       audio.play();
     }
     noise = true;
-    bottomRight.style.backgroundColor = "lightskylue";
+    bottomRight.style.backgroundColor = "lightskyblue";
   }
 
   function clearColor() {
@@ -135,7 +135,7 @@ onButton.addEventListener("click", event => {
     bottomRight.style.backgroundColor = "lightblue";
   }
 
-  topLeft.addEventListener("click", event => {
+  topLeft.addEventListener("click", (event) => {
     if (on) {
       playerOrder.push(1);
       check();
@@ -147,7 +147,7 @@ onButton.addEventListener("click", event => {
       }
     }
   });
-  topRight.addEventListener("click", event => {
+  topRight.addEventListener("click", (event) => {
     if (on) {
       playerOrder.push(2);
       check();
@@ -159,7 +159,7 @@ onButton.addEventListener("click", event => {
       }
     }
   });
-  bottomLeft.addEventListener("click", event => {
+  bottomLeft.addEventListener("click", (event) => {
     if (on) {
       playerOrder.push(3);
       check();
@@ -171,7 +171,7 @@ onButton.addEventListener("click", event => {
       }
     }
   });
-  bottomRight.addEventListener("click", event => {
+  bottomRight.addEventListener("click", (event) => {
     if (on) {
       playerOrder.push(4);
       check();
